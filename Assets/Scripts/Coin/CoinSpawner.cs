@@ -11,7 +11,6 @@ public class CoinSpawner : MonoBehaviour
     private List<Vector3> _usedSpawnPoints = new List<Vector3>();
 
     private int _coinSpawnAmount = 10;
-    public int CoinSpawnAmount => _coinSpawnAmount;
 
     private void Start()
     {

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FinishPoint : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D pointCollider)
     {
-        if (collision.TryGetComponent<Player>(out Player player))
+        if (pointCollider.TryGetComponent<Player>(out Player player))
         {
-            Debug.Log("Stage Clear");
+            Destroy(pointCollider.gameObject);
         }
     }
 }
