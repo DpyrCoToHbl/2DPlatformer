@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     internal bool isGrounded;
     private float _move;
+    private int _pushOffX = 45;
+    private int _pushOffY = 30;
+
+
 
 
     private void Start()
@@ -55,11 +59,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isFacingRight)
             {
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(-45, 30));
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(-_pushOffX, _pushOffY));
             }
             if (!isFacingRight)
             {
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(45, 30));
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(_pushOffX, _pushOffY));
             }
         }
     }
